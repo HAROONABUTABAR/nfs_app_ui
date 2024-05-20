@@ -1,16 +1,15 @@
-# custom_widget
+#NTF APP UI 
+P A G E S
 
-A new Flutter project.
+📱 O N B O A R D I N G  P A G E 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+<div class="image-row">
+   <img src="screenshot/Simulator Screenshot - iPhone 15 Pro - 2024-05-20 at 19.00.07.png" width="200" />
+   <img src="screenshot/Simulator Screenshot - iPhone 15 Pro - 2024-05-20 at 19.00.09.png" width="200" />
+   <img src="screenshot/Simulator Screenshot - iPhone 15 Pro - 2024-05-20 at 19.00.12.png" width="200" />
+</div>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+

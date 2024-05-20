@@ -1,60 +1,75 @@
-import 'package:custom_widget/core/helpers/spacing.dart';
+import 'dart:developer';
+
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
+import 'package:custom_widget/features/ui/on_boarding/widget/onboarding_contect.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBordangScreen extends StatelessWidget {
   const OnBordangScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<Widget> onBorading = [
+      const OnBordingContant(
+        title: "Discover largest\nNFT marketplace",
+        subTitle: "Buy and sell digital items",
+        image: "assets/images/onbording/onbording1.png",
+      ),
+      const OnBordingContant(
+        title: "Start your own\nNFT gallery now",
+        subTitle: "Buy and sell digital items",
+        image: "assets/images/onbording/onbording2.png",
+      ),
+      const OnBordingContant(
+        title: "Discovering the\nworld of crypto art",
+        subTitle: "Buy and sell digital items",
+        image: "assets/images/onbording/onbording3.png",
+      ),
+      const OnBordingContant(
+        title: "Discovering the\nworld of crypto art",
+        subTitle: "Buy and sell digital items",
+        image: "assets/images/onbording/onbording3.png",
+      ),
+    ];
+    PageController pageController = PageController();
     return Scaffold(
-      body: PageView.builder(itemBuilder: (context, index) {
-        return Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              verticalSpace(150.h),
-              Expanded(
-                flex: 0,
-                child: Image.asset(
-                  "assets/images/cons.png",
-                  width: 207,
-                  height: 207,
-                ),
-              ),
-              verticalSpace(80.h),
-              Expanded(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: ColorsManager.secondaryColor,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40.r),
-                        topRight: Radius.circular(40.r)),
-                  ),
-                  width: double.infinity,
-                  height: 700,
-                  child: Column(
-                    children: [
-                      verticalSpace(30),
-                      Text(
-                        "Discover largest\nNFT marketplace",
-                        style: TextStyles.font32BlueBold,
-                      ),
-                      verticalSpace(20),
-                      Text(
-                        "Buy and sell digital items",
-                        style: TextStyles.font14GrayRegular,
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ],
+      body: Stack(
+        children: [
+          PageView.builder(
+            onPageChanged: (value) {
+              log("message: $value");
+            },
+            controller: pageController,
+            itemCount: onBorading.length,
+            itemBuilder: (context, index) {
+              return onBorading[index];
+            },
           ),
-        );
-      }),
+          pageController.initialPage == 4
+              ? Container()
+              : Positioned(
+                  bottom: 40,
+                  left: 20,
+                  child: Center(
+                    child: Container(
+                      height: 60,
+                      width: 350,
+                      decoration: BoxDecoration(
+                        color: ColorsManager.primayColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Next",
+                          style: TextStyles.font13DarkBlueRegular,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+        ],
+      ),
     );
   }
 }
