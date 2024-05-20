@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.9.1
   flutter_onboarding_slider: ^1.0.11
   smooth_page_indicator: ^1.1.0
+  flutter_bloc: ^8.1.5
 
 dev_dependencies:
   flutter_test:
@@ -50,6 +51,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/onbording/
+    - assets/images/logo/
+    - assets/images/background/
     - assets/icons/
     - assets/fonts/
   fonts:
