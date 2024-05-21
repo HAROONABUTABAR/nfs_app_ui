@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/theming/colors.dart';
 import '../../../core/theming/styles.dart';
+import '../connect_with_wallet/connect_with_wallet.dart';
 import 'logic/bloc/on_boarding_bloc.dart';
 import 'widget/onboarding_contect.dart';
 
@@ -46,6 +47,7 @@ class OnBoardingContentScreen extends StatelessWidget {
       ),
     ];
     PageController pageController = PageController();
+    // pageController.nextPage(duration: duration, curve: curve)
     var bloc = context.read<OnBoardingBloc>();
     var blocListener = context.watch<OnBoardingBloc>();
     return Stack(
@@ -67,36 +69,62 @@ class OnBoardingContentScreen extends StatelessWidget {
                 child: Center(
                   child: Row(
                     children: [
-                      Container(
-                        height: 49,
-                        width: 270,
-                        decoration: BoxDecoration(
-                          color: ColorsManager.primayColor,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Connect with Wallet",
-                            style: TextStyles.font13DarkBlueRegular,
+                      GestureDetector(
+                        onTap: () {
+                          blocListener.index == 3
+                              ? Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ConnetWithWalletView()))
+                              : pageController.animateToPage(bloc.index + 1,
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeIn);
+                        },
+                        child: Container(
+                          height: 49,
+                          width: 270,
+                          decoration: BoxDecoration(
+                            color: ColorsManager.primayColor,
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Center(
+                            child: Text(
+                              "Connect with Wallet",
+                              style: TextStyles.font13DarkBlueRegular,
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(
                         width: 15.w,
                       ),
-                      Container(
-                        height: 45,
-                        width: 66,
-                        decoration: BoxDecoration(
-                            color: ColorsManager.darkColor,
-                            border: Border.all(
-                              color: ColorsManager.whiteColor,
-                            ),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Icon(
-                          Icons.arrow_forward_ios,
-                          color: ColorsManager.whiteColor,
-                          size: 15.sp,
+                      GestureDetector(
+                        onTap: () {
+                          blocListener.index == 3
+                              ? Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ConnetWithWalletView()))
+                              : pageController.animateToPage(bloc.index + 1,
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeIn);
+                        },
+                        child: Container(
+                          height: 45,
+                          width: 66,
+                          decoration: BoxDecoration(
+                              color: ColorsManager.darkColor,
+                              border: Border.all(
+                                color: ColorsManager.whiteColor,
+                              ),
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Icon(
+                            Icons.arrow_forward_ios,
+                            color: ColorsManager.whiteColor,
+                            size: 15.sp,
+                          ),
                         ),
                       ),
                     ],
@@ -106,18 +134,31 @@ class OnBoardingContentScreen extends StatelessWidget {
             : Positioned(
                 bottom: 40,
                 left: 40,
-                child: Center(
-                  child: Container(
-                    height: 49,
-                    width: 313,
-                    decoration: BoxDecoration(
-                      color: ColorsManager.primayColor,
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Center(
-                      child: Text(
-                        "Next",
-                        style: TextStyles.font13DarkBlueRegular,
+                child: GestureDetector(
+                  onTap: () {
+                    blocListener.index == 3
+                        ? Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ConnetWithWalletView()))
+                        : pageController.animateToPage(bloc.index + 1,
+                            duration: const Duration(milliseconds: 500),
+                            curve: Curves.easeIn);
+                  },
+                  child: Center(
+                    child: Container(
+                      height: 49,
+                      width: 313,
+                      decoration: BoxDecoration(
+                        color: ColorsManager.primayColor,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Next",
+                          style: TextStyles.font13DarkBlueRegular,
+                        ),
                       ),
                     ),
                   ),
