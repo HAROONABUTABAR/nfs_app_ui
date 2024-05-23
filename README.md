@@ -11,6 +11,12 @@ P A G E S
   <img src="screenshot/Simulator Screenshot - iPhone 15 Pro - 2024-05-20 at 20.22.23.png" width="200" />
 </div>
 
+<div class="image-row">
+  <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 13.29.38.png" width="200" />
+  <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 13.29.41.png" width="200" />
+  <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 13.29.51.png" width="200" />
+</div>
+
 
 
 
