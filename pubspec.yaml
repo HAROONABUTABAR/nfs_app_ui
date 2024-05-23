@@ -54,6 +54,7 @@ flutter:
     - assets/images/background/
     - assets/images/connect_wallet_image/
     - assets/images/profile_setup_image/
+    - assets/images/hey_welcome_image/
     - assets/icons/
     - assets/fonts/
   fonts:

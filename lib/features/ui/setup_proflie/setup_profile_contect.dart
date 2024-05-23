@@ -4,6 +4,7 @@ import 'package:custom_widget/core/helpers/spacing.dart';
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
 import 'package:custom_widget/features/common_widget/button_action.dart';
+import 'package:custom_widget/features/ui/hey_welcome/hey_welcome.dart';
 import 'package:custom_widget/features/ui/setup_proflie/logic/bloc/setup_profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +20,7 @@ class SetUpProfileContent extends StatelessWidget {
   Widget build(BuildContext context) {
     var bloc = context.read<SetupProfileBloc>();
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: ListView(
         children: [
           verticalSpace(32),
@@ -43,7 +44,10 @@ class SetUpProfileContent extends StatelessWidget {
                   onTap: () {
                     if (bloc.nameUserController.text.isNotEmpty &&
                         bloc.emailConteroller.text.isNotEmpty) {
-                      log("This ${bloc.nameUserController.text} ${bloc.emailConteroller.text} ${bloc.bioController.text}");
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HeyWelcomeView()));
                     } else if (bloc.nameUserController.text.isEmpty) {
                       snackBar(
                         context,

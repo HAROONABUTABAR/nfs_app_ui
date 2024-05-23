@@ -4,6 +4,8 @@ import 'package:custom_widget/features/ui/setup_proflie/setup_profile_contect.da
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../core/theming/styles.dart';
+
 class SetUpProfileView extends StatelessWidget {
   const SetUpProfileView({super.key});
 
@@ -15,6 +17,12 @@ class SetUpProfileView extends StatelessWidget {
         backgroundColor: ColorsManager.darkColor,
         appBar: AppBar(
           backgroundColor: ColorsManager.darkColor,
+          title: Text(
+            "Setup Profile",
+            style: TextStyles.font24BlackBold.copyWith(
+              color: ColorsManager.whiteColor,
+            ),
+          ),
           leading: IconButton(
             onPressed: () {
               Navigator.pop(context);
