@@ -44,10 +44,11 @@ class SetUpProfileContent extends StatelessWidget {
                   onTap: () {
                     if (bloc.nameUserController.text.isNotEmpty &&
                         bloc.emailConteroller.text.isNotEmpty) {
-                      Navigator.push(
+                      Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HeyWelcomeView()));
+                              builder: (context) => const HeyWelcomeView()),
+                          (route) => false);
                     } else if (bloc.nameUserController.text.isEmpty) {
                       snackBar(
                         context,
