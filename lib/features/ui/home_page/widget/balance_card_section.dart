@@ -70,11 +70,7 @@ class BalanceCardSection extends StatelessWidget {
               ),
             ],
           ),
-          const CircleAvatar(
-            radius: 24,
-            backgroundImage:
-                AssetImage("assets/images/home_image/home_page_image.png"),
-          ),
+          // SvgPicture.asset("assets/images/home_image/home_page_image.svg"),
         ],
       ),
     );
