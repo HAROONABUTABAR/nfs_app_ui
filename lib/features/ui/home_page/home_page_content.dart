@@ -1,5 +1,10 @@
 import 'package:custom_widget/core/theming/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../core/helpers/spacing.dart';
+import '../../../core/theming/colors.dart';
+import 'widget/balance_card_section.dart';
 
 class HomePageContent extends StatelessWidget {
   const HomePageContent({super.key});
@@ -8,12 +13,8 @@ class HomePageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Center(
-          child: Text(
-            "Home",
-            style: TextStyles.font32BlueBold,
-          ),
-        )
+        verticalSpace(20),
+        const BalanceCardSection(),
       ],
     );
   }
