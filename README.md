@@ -16,7 +16,7 @@ P A G E S
 <div class="image-row">
   <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 13.29.38.png" width="200" />
   <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 13.29.41.png" width="200" />
-  <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 14.15.47.png" width="200" />
+  <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-23 at 14.19.01.png" width="200" />
   <img src="screenshot/simulator_screenshot_97EE55D3-8ED3-42C8-9D38-B4367D37A515.png" width="200" />
 </div>
 
