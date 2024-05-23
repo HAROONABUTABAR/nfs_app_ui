@@ -1,8 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../core/theming/colors.dart';
 import '../../../core/theming/styles.dart';
@@ -62,6 +61,26 @@ class OnBoardingContentScreen extends StatelessWidget {
             return onBorading[index];
           },
         ),
+        blocListener.index == 3
+            ? Container()
+            : Positioned(
+                bottom: 150,
+                left: 160,
+                child: Center(
+                  child: SmoothPageIndicator(
+                    controller: pageController,
+                    count: onBorading.length - 1,
+                    axisDirection: Axis.horizontal,
+                    effect: const WormEffect(
+                      spacing: 8.0,
+                      radius: 50.0,
+                      strokeWidth: 2,
+                      dotColor: ColorsManager.darkColor,
+                      activeDotColor: ColorsManager.whiteColor,
+                    ),
+                  ),
+                ),
+              ),
         blocListener.index == 3
             ? Positioned(
                 bottom: 40,

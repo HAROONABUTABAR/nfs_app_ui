@@ -1,0 +1,5 @@
+{
+  "sciencefidelity.dart.config.enableAnalyzer" : "true",
+  "sciencefidelity.dart.config.formatDocumentOnSave" : "true",
+  "workspace.color" : 0
+}
