@@ -22,7 +22,7 @@ class BalanceCardSection extends StatelessWidget {
             children: [
               Container(
                 alignment: Alignment.topCenter,
-                height: 48,
+                height: 45,
                 width: 130,
                 padding: const EdgeInsets.only(
                   top: 8,
@@ -37,24 +37,28 @@ class BalanceCardSection extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    horizontalSpace(10),
+                    horizontalSpace(15),
                     SvgPicture.asset(
-                        "assets/images/home_image/logos_ethereum.svg"),
+                      "assets/images/home_image/logos_ethereum.svg",
+                    ),
                     horizontalSpace(12),
                     Text(
                       "26,031",
-                      style: TextStyles.font32BlueBold.copyWith(fontSize: 20),
+                      style: TextStyles.font32BlueBold.copyWith(fontSize: 17),
                     ),
                   ],
                 ),
               ),
               Positioned(
-                bottom: -12,
+                bottom: -15,
                 left: 20,
                 child: Container(
                   alignment: Alignment.bottomCenter,
                   color: ColorsManager.darkColor,
-                  padding: const EdgeInsets.only(left: 8, right: 8),
+                  padding: const EdgeInsets.only(
+                    left: 12,
+                    right: 8,
+                  ),
                   child: Text(
                     "Balance",
                     style: TextStyles.font13BlueRegular.copyWith(
