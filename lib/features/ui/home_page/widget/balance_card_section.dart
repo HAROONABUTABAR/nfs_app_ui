@@ -70,7 +70,9 @@ class BalanceCardSection extends StatelessWidget {
               ),
             ],
           ),
-          // SvgPicture.asset("assets/images/home_image/home_page_image.svg"),
+          Image.asset(
+            "assets/images/home_image/appBarPhoto.png",
+          ),
         ],
       ),
     );

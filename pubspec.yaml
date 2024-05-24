@@ -40,6 +40,8 @@ dependencies:
   flutter_bloc: ^8.1.5
   top_snackbar_flutter: ^3.1.0
   flutter_svg: ^2.0.10+1
+  flashy_tab_bar2: ^0.0.10
+  persistent_bottom_nav_bar_v2: ^5.2.3
 
 dev_dependencies:
   flutter_test:
@@ -57,6 +59,7 @@ flutter:
     - assets/images/profile_setup_image/
     - assets/images/hey_welcome_image/
     - assets/images/home_image/
+    - assets/images/search/
     - assets/icons/
     - assets/fonts/
   fonts:

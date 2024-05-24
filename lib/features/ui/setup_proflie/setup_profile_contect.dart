@@ -1,9 +1,8 @@
-import 'dart:developer';
-
 import 'package:custom_widget/core/helpers/spacing.dart';
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
 import 'package:custom_widget/features/common_widget/button_action.dart';
+import 'package:custom_widget/features/ui/bottom_nav_bar/bottom_nav_bar_view.dart';
 import 'package:custom_widget/features/ui/hey_welcome/hey_welcome.dart';
 import 'package:custom_widget/features/ui/setup_proflie/logic/bloc/setup_profile_bloc.dart';
 import 'package:flutter/material.dart';
@@ -47,7 +46,7 @@ class SetUpProfileContent extends StatelessWidget {
                       Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HeyWelcomeView()),
+                              builder: (context) => const BottomNavBarView()),
                           (route) => false);
                     } else if (bloc.nameUserController.text.isEmpty) {
                       snackBar(

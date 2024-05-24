@@ -1,10 +1,9 @@
-import 'dart:developer';
+
 
 import 'package:custom_widget/features/ui/setup_proflie/setup_proflie_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:top_snackbar_flutter/custom_snack_bar.dart';
-import 'package:top_snackbar_flutter/top_snack_bar.dart';
+
 
 import '../../../../core/helpers/snack_bar.dart';
 import '../../../../core/helpers/spacing.dart';
