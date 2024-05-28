@@ -1,8 +1,9 @@
 import 'package:custom_widget/core/helpers/spacing.dart';
+import 'package:custom_widget/features/ui/art/art_view.dart';
 import 'package:custom_widget/features/ui/search/logic/bloc/search_bloc.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'data/model/categories_model.dart';
@@ -28,6 +29,7 @@ class SearchViewContent extends StatelessWidget {
           categorieName: "Domain Names",
           imageCategorie: "assets/images/search/categories3.png"),
     ];
+
     List<FeaturedCollectionsModel> featuredCollectionsModel = [
       FeaturedCollectionsModel(
           name: "DourDarcels",
@@ -54,12 +56,22 @@ class SearchViewContent extends StatelessWidget {
           itemNumber: "10K",
           ownersNumber: "4,93K"),
     ];
+
     return ListView(
       children: [
         verticalSpace(22),
         SearchWithTextFiledSection(bloc: bloc),
         verticalSpace(28),
-        CategoriesSearchSection(categriesModel: categriesModel),
+        GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ArtView(),
+                ),
+              );
+            },
+            child: CategoriesSearchSection(categriesModel: categriesModel)),
         verticalSpace(28),
         FeaturedCollectionsSection(
             featuredCollectionsModel: featuredCollectionsModel),
