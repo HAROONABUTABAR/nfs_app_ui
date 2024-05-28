@@ -18,5 +18,10 @@ P A G E S
 <div class="image-row">
    <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-24 at 16.14.53.png" width="100" />
   <img src="screenshot/Simulator Screenshot - iPhone 15 - 2024-05-24 at 16.14.55.png" width="100" />
+      <img src="screenshot/profile.png" width="100" />
+    <img src="screenshot/edit_profile.png" width="100" />
+  
 </div>
 <div>
+
+
