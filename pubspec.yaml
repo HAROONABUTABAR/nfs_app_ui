@@ -64,6 +64,7 @@ flutter:
     - assets/images/art_image/
     - assets/images/stats/rankings/
     - assets/images/stats/activity/
+    - assets/images/net_images/
     - assets/icons/
     - assets/fonts/
   fonts:
