@@ -1,16 +1,16 @@
 import 'package:custom_widget/core/theming/colors.dart';
+import 'package:custom_widget/features/ui/home_page/data/models/prflie_slider_model.dart';
+import 'package:custom_widget/features/ui/net_items_details/net_items_details_content.dart';
 import 'package:flutter/material.dart';
 
-import '../home_page/data/models/prflie_slider_model.dart';
-import 'net_items_content.dart';
-
-class NetItemView extends StatelessWidget {
-  const NetItemView({super.key, required this.model});
+class NetItemsDetailsView extends StatelessWidget {
+  const NetItemsDetailsView({super.key, required this.model});
   final ProfileModel model;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 90,
         backgroundColor: ColorsManager.darkColor,
         leading: IconButton(
           onPressed: () => Navigator.pop(context),
@@ -19,7 +19,15 @@ class NetItemView extends StatelessWidget {
             color: ColorsManager.whiteColor,
           ),
         ),
-        
+        title: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Image.asset(
+            model.mainImage,
+            width: 50,
+            height: 50,
+          ),
+        ),
+        centerTitle: true,
         actions: [
           Container(
             margin: const EdgeInsets.symmetric(
@@ -60,10 +68,8 @@ class NetItemView extends StatelessWidget {
             ),
           ),
         ],
-    
-    
       ),
-      body:  NetItemViewContent(model: model),
+      body: const NetItemsDetailsContent(),
     );
   }
 }
