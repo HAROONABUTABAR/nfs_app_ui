@@ -48,6 +48,7 @@ dependencies:
   custom_refresh_indicator: ^3.1.0
   rive: ^0.13.5
   rive_animated_icon: ^1.1.2
+  flutter_dynamic_icon: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -71,32 +72,32 @@ flutter:
     - assets/images/stats/activity/
     - assets/images/net_images/
     - assets/images/collections_image/
+    - assets/images/icon_app/
     - assets/icons/
     - assets/fonts/
   fonts:
     - family: Gilroy
       fonts:
-        - asset: assets/fonts/Gilroy-Regular.ttf
-        - asset: assets/fonts/Gilroy-SemiBold.ttf
-        - asset: assets/fonts/Gilroy-Bold.ttf
-        - asset: assets/fonts/Gilroy-Medium.ttf
-        - asset: assets/fonts/Gilroy-ExtraBold.ttf
-        - asset: assets/fonts/Gilroy-Light.ttf
-        - asset: assets/fonts/Gilroy-Thin.ttf
-        - asset: assets/fonts/Gilroy-Black.ttf
-        - asset: assets/fonts/Gilroy-ExtraLight.ttf
-        - asset: assets/fonts/Gilroy-UltraLight.ttf
-        - asset: assets/fonts/Gilroy-Heavy.ttf
-        - asset: assets/fonts/Gilroy-Italic.ttf
-        - asset: assets/fonts/Gilroy-RegularItalic.ttf
-        - asset: assets/fonts/Gilroy-SemiBoldItalic.ttf
-        - asset: assets/fonts/Gilroy-MediumItalic.ttf
-        - asset: assets/fonts/Gilroy-BoldItalic.ttf
-        - asset: assets/fonts/Gilroy-BlackItalic.ttf
-        - asset: assets/fonts/Gilroy-ThinItalic.ttf
-        - asset: assets/fonts/Gilroy-ExtraBoldItalic.ttf
-        - asset: assets/fonts/Gilroy-LightItalic.ttf
-        - asset: assets/fonts/Gilroy-ExtraLightItalic.ttf
-        - asset: assets/fonts/Gilroy-UltraLightItalic.ttf
-        - asset: assets/fonts/Gilroy-HeavyItalic.ttf
+        # - asset: assets/fonts/Gilroy-Regular.ttf
+        # - asset: assets/fonts/Gilroy-SemiBold.ttf
+        # - asset: assets/fonts/Gilroy-Bold.ttf
+        # - asset: assets/fonts/Gilroy-Medium.ttf
+        # - asset: assets/fonts/Gilroy-ExtraBold.ttf
+        # - asset: assets/fonts/Gilroy-Light.ttf
+        # - asset: assets/fonts/Gilroy-Thin.ttf
+        # - asset: assets/fonts/Gilroy-Black.ttf
+        # - asset: assets/fonts/Gilroy-UltraLight.ttf
+        # - asset: assets/fonts/Gilroy-Heavy.ttf
+        # - asset: assets/fonts/Gilroy-Italic.ttf
+        # - asset: assets/fonts/Gilroy-RegularItalic.ttf
+        # - asset: assets/fonts/Gilroy-SemiBoldItalic.ttf
+        # - asset: assets/fonts/Gilroy-MediumItalic.ttf
+        # - asset: assets/fonts/Gilroy-BoldItalic.ttf
+        # - asset: assets/fonts/Gilroy-BlackItalic.ttf
+        # - asset: assets/fonts/Gilroy-ThinItalic.ttf
+        # - asset: assets/fonts/Gilroy-ExtraBoldItalic.ttf
+        # - asset: assets/fonts/Gilroy-LightItalic.ttf
+        # - asset: assets/fonts/Gilroy-ExtraLightItalic.ttf
+        # - asset: assets/fonts/Gilroy-UltraLightItalic.ttf
+        # - asset: assets/fonts/Gilroy-HeavyItalic.ttf
   

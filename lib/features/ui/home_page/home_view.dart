@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers
+
 import 'package:custom_refresh_indicator/custom_refresh_indicator.dart';
 import 'package:custom_widget/features/ui/home_page/logic/bloc/home_main_bloc.dart';
 import 'package:flutter/material.dart';
@@ -73,9 +75,9 @@ class LoadingImageHomeSection extends StatelessWidget {
             verticalSpace(12),
             Stack(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 24, right: 24, top: 20),
-                  child: Container(
+                const Padding(
+                  padding: EdgeInsets.only(left: 24, right: 24, top: 20),
+                  child: SizedBox(
                     width: 340,
                     height: 300,
                   ),

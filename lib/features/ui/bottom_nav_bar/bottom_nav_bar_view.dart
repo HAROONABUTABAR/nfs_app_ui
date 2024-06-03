@@ -1,7 +1,4 @@
-import 'dart:developer';
-
 import 'package:custom_widget/core/theming/colors.dart';
-import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -68,6 +65,14 @@ class BottomNavBarView extends StatelessWidget {
                           },
                           loopAnimation: false,
                         ),
+                        RiveButton(
+                          bloc: bloc,
+                          riveIcon: RiveIcon.settings3,
+                          onTap: () {
+                            bloc.add(BottomNavBarChangeIndexEvent(index: 4));
+                          },
+                          loopAnimation: false,
+                        ),
                       ],
                     ),
                   ),
@@ -102,9 +107,7 @@ class RiveButton extends StatelessWidget {
       color: ColorsManager.whiteColor,
       loopAnimation: loopAnimation,
       onTap: onTap,
-      onHover: (value) {
-        
-      },
+      onHover: (value) {},
     );
   }
 }
