@@ -1,7 +1,8 @@
 import 'package:custom_widget/core/theming/styles.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/theming/colors.dart';
+import 'tab_net_item/tab_details_section.dart';
 
 class NetItemsDetailsContent extends StatelessWidget {
   const NetItemsDetailsContent({super.key});
@@ -26,7 +27,18 @@ class NetItemsDetailsContent extends StatelessWidget {
               unselectedLabelStyle: TextStyles.font13DarkBlueMedium.copyWith(
                 color: ColorsManager.grayColor,
               ),
-              tabs: tabs)
+              tabs: tabs),
+          SizedBox(
+            height: 800.h,
+            child: TabBarView(
+              children: [
+                const TabDetailsSection(),
+                Container(),
+                Container(),
+                Container(),
+              ],
+            ),
+          ),
         ],
       ),
     );

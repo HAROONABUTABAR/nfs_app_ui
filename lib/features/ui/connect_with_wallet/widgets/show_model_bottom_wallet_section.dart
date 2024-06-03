@@ -1,9 +1,7 @@
-
-
 import 'package:custom_widget/features/ui/setup_proflie/setup_proflie_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:toastification/toastification.dart';
 
 import '../../../../core/helpers/snack_bar.dart';
 import '../../../../core/helpers/spacing.dart';
@@ -50,10 +48,14 @@ Future<dynamic> showModelBottomWalletSection(BuildContext context) {
                 colorButton: ColorsManager.primayColor,
                 onTap: () {
                   if (bloc.walletController.text.isEmpty) {
-                    snackBar(
-                      context,
-                      "Something went wrong. Please check your credentials and try again",
-                      type: SnackBarType.error,
+                    showCustomToast(
+                      context: context,
+                      message: "Adderss Wallet cannot be empty.",
+                      description:
+                          "Something went wrong. Please check your credentials and try again",
+                      primaryColor: ColorsManager.dangerColor,
+                      icon: const Icon(Icons.error_outline),
+                      type: ToastificationType.error,
                     );
                   } else {
                     Navigator.push(

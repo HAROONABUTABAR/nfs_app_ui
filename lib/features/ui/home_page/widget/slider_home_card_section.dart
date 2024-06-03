@@ -25,7 +25,9 @@ class SliderHomeCardSection extends StatelessWidget {
                       model: model,
                     )));
       },
-      child: Padding(
+      child:
+      
+       Padding(
         padding: const EdgeInsets.only(left: 24),
         child: Container(
           height: 490,
@@ -42,8 +44,8 @@ class SliderHomeCardSection extends StatelessWidget {
                     padding:
                         const EdgeInsets.only(left: 24, right: 24, top: 20),
                     child: Image.asset(
-                      width: 350,
-                      height: 330,
+                      width: 340,
+                      height: 300,
                       fit: BoxFit.cover,
                       model.mainImage,
                     ),
@@ -102,11 +104,12 @@ class SliderHomeCardSection extends StatelessWidget {
               ),
               verticalSpace(35),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Image.asset(model.profilePhoto),
                         horizontalSpace(3),
@@ -140,10 +143,13 @@ class SliderHomeCardSection extends StatelessWidget {
                   ],
                 ),
               ),
+              verticalSpace(10),
             ],
           ),
         ),
       ),
+  
+  
     );
   }
 }

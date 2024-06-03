@@ -22,6 +22,7 @@ class NtfApp extends StatelessWidget {
           theme: ThemeData(
             primaryColor: ColorsManager.primayColor,
             scaffoldBackgroundColor: ColorsManager.darkColor,
+            fontFamily: "Gilroy",
           ),
           debugShowCheckedModeBanner: false,
           home: const BottomNavBarView(),

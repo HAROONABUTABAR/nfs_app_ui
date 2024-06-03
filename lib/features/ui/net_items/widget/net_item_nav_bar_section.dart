@@ -1,6 +1,6 @@
 import 'package:custom_widget/features/ui/net_items_details/net_items_details_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -37,7 +37,9 @@ class NetItemNavBarSection extends StatelessWidget {
               horizontalSpace(10),
               Text(
                 model.ethNumber,
-                style: TextStyles.font24BlueBold,
+                style: TextStyles.font16WhiteSemiBold.copyWith(
+                  fontSize: 22,
+                ),
               )
             ],
           ),
@@ -66,7 +68,7 @@ class NetItemNavBarSection extends StatelessWidget {
                   horizontalSpace(10),
                   Text(
                     "Place a bid ",
-                    style: TextStyles.font16WhiteSemiBold,
+                    style: TextStyles.font13BlueRegular,
                   ),
                 ],
               ),

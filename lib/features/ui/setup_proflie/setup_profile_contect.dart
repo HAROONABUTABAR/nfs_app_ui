@@ -6,6 +6,7 @@ import 'package:custom_widget/features/ui/bottom_nav_bar/bottom_nav_bar_view.dar
 import 'package:custom_widget/features/ui/setup_proflie/logic/bloc/setup_profile_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:toastification/toastification.dart';
 
 import '../../../core/helpers/snack_bar.dart';
 import 'widget/form_register_section.dart';
@@ -48,17 +49,25 @@ class SetUpProfileContent extends StatelessWidget {
                               builder: (context) => const BottomNavBarView()),
                           (route) => false);
                     } else if (bloc.nameUserController.text.isEmpty) {
-                      snackBar(
-                        context,
-                        "Username can't be empty",
-                        type: SnackBarType.error,
+                      showCustomToast(
+                        context: context,
+                        message: "Username cannot be empty.",
+                        description:
+                            'Please enter a valid username to continue.',
+                        primaryColor: ColorsManager.dangerColor,
+                        icon: const Icon(Icons.error_outline),
+                        type: ToastificationType.error,
                       );
                     } else if (bloc.emailConteroller.text.isEmpty) {
-                      snackBar(
-                        context,
-                        "Email can't be empty",
-                        type: SnackBarType.error,
+                      showCustomToast(
+                        context: context,
+                        message: "Email cannot be empty.",
+                        description: 'Please enter a valid Email to continue.',
+                        primaryColor: ColorsManager.dangerColor,
+                        icon: const Icon(Icons.error_outline),
+                        type: ToastificationType.error,
                       );
+            
                     }
                   },
                   textButton: "Submit",
