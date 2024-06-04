@@ -73,6 +73,14 @@ class BottomNavBarView extends StatelessWidget {
                           },
                           loopAnimation: false,
                         ),
+                        RiveButton(
+                          bloc: bloc,
+                          riveIcon: RiveIcon.diamond,
+                          onTap: () {
+                            bloc.add(BottomNavBarChangeIndexEvent(index: 5));
+                          },
+                          loopAnimation: false,
+                        )
                       ],
                     ),
                   ),

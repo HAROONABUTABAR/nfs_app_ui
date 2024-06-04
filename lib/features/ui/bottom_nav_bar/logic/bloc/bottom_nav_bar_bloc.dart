@@ -1,6 +1,6 @@
-
 import 'dart:async';
 import 'package:custom_widget/features/ui/home_page/home_view.dart';
+import 'package:custom_widget/features/ui/nts_discovrd/nts_discovred_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../profile/profile_view.dart';
@@ -24,6 +24,7 @@ class BottomNavBarBloc extends Bloc<BottomNavBarEvent, BottomNavBarState> {
     const StatsView(),
     const ProfileView(),
     const SettingAppView(),
+    const NtsDiscovredView()
     // const SettingsView(),
   ];
 

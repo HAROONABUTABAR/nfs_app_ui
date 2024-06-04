@@ -73,6 +73,7 @@ flutter:
     - assets/images/net_images/
     - assets/images/collections_image/
     - assets/images/icon_app/
+    - assets/images/nts_list_images/
     - assets/icons/
     - assets/fonts/
   fonts:
