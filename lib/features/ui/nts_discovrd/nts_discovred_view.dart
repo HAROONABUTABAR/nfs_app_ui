@@ -2,7 +2,7 @@ import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
-import 'nts_discovred_content.dart';
+import 'widget/image_list_view.dart';
 
 class NtsDiscovredView extends StatelessWidget {
   const NtsDiscovredView({super.key});
@@ -72,12 +72,11 @@ class NtsDiscovredView extends StatelessWidget {
                     style: TextStyles.font13BlueRegular,
                   ),
                   const SizedBox(height: 12),
-                  const Text(
+                  Text(
                     'Check out this raffle for you guys only! new coin minted show some love.',
-                    style: TextStyle(
-                      color: Colors.white70,
-                      height: 1.2,
-                    ),
+                    style: TextStyles.font13BlueRegular.copyWith(
+                        height: 1.2,
+                        color: ColorsManager.whiteColor.withOpacity(0.5)),
                   ),
                   const SizedBox(height: 12),
                   // const Spacer(),

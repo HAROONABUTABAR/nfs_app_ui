@@ -3,9 +3,12 @@ import 'dart:math';
 import 'dart:ui';
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
+import 'package:custom_widget/features/ui/nts_discovrd/widget/info_tile_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/helpers/animations/fade_animation.dart';
+import 'widget/blur_container_section.dart';
+import 'widget/image_title_section.dart';
 
 class NtsDiscovredContent extends StatelessWidget {
   const NtsDiscovredContent({super.key, required this.image});
@@ -30,7 +33,7 @@ class NtsDiscovredContent extends StatelessWidget {
                 left: 10,
                 child: FadeAnimation(
                   intervalEnd: 0.1,
-                  child: BlurContainer(
+                  child: BlurContainerSection(
                     child: Container(
                       width: 160,
                       height: 40,
@@ -101,8 +104,8 @@ class NtsDiscovredContent extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  _InfoTile(title: '3d 5h 23m', subtitle: 'Remaining Time'),
-                  _InfoTile(title: '16.7 ETH', subtitle: 'Highest Bid'),
+                  InfoTileSection(title: '3d 5h 23m', subtitle: 'Remaining Time'),
+                  InfoTileSection(title: '16.7 ETH', subtitle: 'Highest Bid'),
                 ],
               ),
             ),
@@ -127,147 +130,6 @@ class NtsDiscovredContent extends StatelessWidget {
           ),
           const SizedBox(height: 50),
         ],
-      ),
-    );
-  }
-}
-
-class _InfoTile extends StatelessWidget {
-  const _InfoTile({required this.title, required this.subtitle});
-
-  final String title;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          title,
-          style: TextStyles.font13BlueRegular,
-        ),
-        const SizedBox(height: 5),
-        Text(
-          subtitle,
-          style: const TextStyle(
-            color: Colors.white70,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class ImageListView extends StatefulWidget {
-  const ImageListView(
-      {super.key, required this.startIndex, this.duration = 30});
-
-  final int startIndex;
-
-  final int duration;
-
-  @override
-  _ImageListViewState createState() => _ImageListViewState();
-}
-
-class _ImageListViewState extends State<ImageListView> {
-  late ScrollController _scrollController;
-
-  @override
-  void initState() {
-    super.initState();
-
-    _scrollController = ScrollController();
-
-    _scrollController.addListener(() {
-      //Detect if is at the end of list view
-      if (_scrollController.position.atEdge) {
-        _autoScroll();
-      }
-    });
-
-    //Add this to make sure that controller has been attacted to List View
-    WidgetsBinding.instance?.addPostFrameCallback((_) {
-      _autoScroll();
-    });
-  }
-
-  _autoScroll() {
-    final currentScrollPosition = _scrollController.offset;
-
-    final scrollEndPosition = _scrollController.position.maxScrollExtent;
-
-    scheduleMicrotask(() {
-      _scrollController.animateTo(
-        currentScrollPosition == scrollEndPosition ? 0 : scrollEndPosition,
-        duration: Duration(seconds: widget.duration),
-        curve: Curves.linear,
-      );
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Transform.rotate(
-      angle: 1.96 * pi,
-      child: SizedBox(
-        height: 130,
-        child: ListView.builder(
-          controller: _scrollController,
-          itemCount: 10,
-          scrollDirection: Axis.horizontal,
-          itemBuilder: (BuildContext context, int index) {
-            return _ImageTile(
-                image:
-                    'assets/images/nts_list_images/${widget.startIndex + index}.png');
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class _ImageTile extends StatelessWidget {
-  const _ImageTile({required this.image});
-
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => NtsDiscovredContent(image: image)),
-        );
-      },
-      child: Hero(
-        tag: image,
-        child: Image.asset(
-          image,
-          width: 130,
-        ),
-      ),
-    );
-  }
-}
-
-class BlurContainer extends StatelessWidget {
-  const BlurContainer({super.key, required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(8),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(
-          sigmaX: 10.0,
-          sigmaY: 10.0,
-        ),
-        child: child,
       ),
     );
   }
