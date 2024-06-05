@@ -1,5 +1,4 @@
 import 'package:custom_widget/core/theming/colors.dart';
-import 'package:custom_widget/features/ui/bottom_nav_bar/bottom_nav_bar_view.dart';
 import 'package:custom_widget/features/ui/bottom_nav_bar/logic/bloc/bottom_nav_bar_bloc.dart';
 import 'package:custom_widget/features/ui/on_boarding/on_boarding.dart';
 

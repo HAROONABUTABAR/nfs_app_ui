@@ -14,10 +14,10 @@ class ImageListView extends StatefulWidget {
   final int duration;
 
   @override
-  _ImageListViewState createState() => _ImageListViewState();
+  ImageListViewState createState() => ImageListViewState();
 }
 
-class _ImageListViewState extends State<ImageListView> {
+class ImageListViewState extends State<ImageListView> {
   late ScrollController _scrollController;
 
   @override

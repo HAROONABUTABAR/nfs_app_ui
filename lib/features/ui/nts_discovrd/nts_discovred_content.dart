@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:math';
-import 'dart:ui';
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
 import 'package:custom_widget/features/ui/nts_discovrd/widget/info_tile_section.dart';
@@ -8,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/helpers/animations/fade_animation.dart';
 import 'widget/blur_container_section.dart';
-import 'widget/image_title_section.dart';
+
 
 class NtsDiscovredContent extends StatelessWidget {
   const NtsDiscovredContent({super.key, required this.image});
