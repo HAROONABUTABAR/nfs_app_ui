@@ -1,3 +1,4 @@
+import 'package:custom_widget/features/ui/upload_nft/upload_nft_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/helpers/spacing.dart';
 import '../../../../../core/theming/colors.dart';
@@ -37,7 +38,14 @@ class CollectedTabSection extends StatelessWidget {
             ActionButtonSection(
               width: 100,
               height: 35,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const UploadNftView(),
+                  ),
+                );
+              },
               textButton: "Upload",
               colorButton: ColorsManager.primayColor,
             )
