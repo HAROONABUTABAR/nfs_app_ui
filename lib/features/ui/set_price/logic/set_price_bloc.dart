@@ -10,4 +10,7 @@ class SetPriceBloc extends Bloc<SetPriceEvent, SetPriceState> {
   }
   TextEditingController supplyItemsController =
       TextEditingController(text: "Supply Items");
+
+  TextEditingController priceController = TextEditingController();
+  TextEditingController timeController = TextEditingController();
 }
