@@ -30,6 +30,8 @@ class UploadNewItemNftBloc
       } else {
         emit(UploadNewItemSuccessState());
       }
-    } catch (e) {}
+    } catch (e) {
+      emit(UploadNewItemErrorState(message: e.toString()));
+    }
   }
 }

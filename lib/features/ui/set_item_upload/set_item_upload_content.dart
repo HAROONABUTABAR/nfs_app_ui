@@ -1,6 +1,8 @@
 import 'package:custom_widget/core/helpers/spacing.dart';
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/core/theming/styles.dart';
+import 'package:custom_widget/features/common_widget/button_action.dart';
+import 'package:custom_widget/features/ui/set_price/set_price_view.dart';
 import 'package:flutter/material.dart';
 
 class SetUploadItemContent extends StatelessWidget {
@@ -8,7 +10,7 @@ class SetUploadItemContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: [
         verticalSpace(20),
         const DropDownListSetItemSection(),
@@ -27,6 +29,22 @@ class SetUploadItemContent extends StatelessWidget {
           mainText: "Stats",
           subText: "Numerical traits that show as a number",
         ),
+        const Spacer(
+          flex: 6,
+        ),
+        ActionButtonSection(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SetPriceView(),
+              ),
+            );
+          },
+          textButton: "Next",
+          colorButton: ColorsManager.primayColor,
+        ),
+        const Spacer(),
       ],
     );
   }

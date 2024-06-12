@@ -8,7 +8,11 @@ class UploadNewItemLoadingState extends UploadNewItemNftState {}
 
 class UploadNewItemSuccessState extends UploadNewItemNftState {}
 
-class UploadNewItemErrorState extends UploadNewItemNftState {}
+class UploadNewItemErrorState extends UploadNewItemNftState {
+  final String message;
+
+  UploadNewItemErrorState({required this.message});
+}
 
 class UploadTextNameState extends UploadNewItemNftState {}
 
