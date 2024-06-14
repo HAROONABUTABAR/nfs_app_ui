@@ -1,11 +1,12 @@
 import 'package:custom_widget/core/helpers/spacing.dart';
 import 'package:custom_widget/core/theming/colors.dart';
 import 'package:custom_widget/features/common_widget/button_action.dart';
+import 'package:custom_widget/features/ui/complete_listing/complete_listing_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:toastification/toastification.dart';
+import '../../../core/helpers/snack_bar.dart';
 import '../../../core/theming/divider_section.dart';
-import '../../../core/theming/styles.dart';
 import 'logic/set_price_bloc.dart';
 import 'widgets/date_with_time_section.dart';
 import 'widgets/eth_with_price_section.dart';
@@ -45,7 +46,35 @@ class SetPriceContent extends StatelessWidget {
         const TotalEarnigsEthSection(),
         verticalSpace(25),
         ActionButtonSection(
-          onTap: () {},
+          onTap: () {
+            if(bloc.priceController.text.isEmpty){
+                showCustomToast(
+                    context: context,
+                    message: "Set Price cannot be empty.",
+                    description:
+                        'Please enter a valid Set Price to continue.',
+                    primaryColor: ColorsManager.dangerColor,
+                    icon: const Icon(Icons.error_outline),
+                    type: ToastificationType.error,
+                  );
+
+            }else if(bloc.timeController.text.isEmpty){
+                showCustomToast(
+                    context: context,
+                    message: "Set Time cannot be empty.",
+                    description:
+                        'Please enter a valid Set Time to continue.',
+                    primaryColor: ColorsManager.dangerColor,
+                    icon: const Icon(Icons.error_outline),
+                    type: ToastificationType.error,
+                  );
+            }else{
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CompleteListingView()),
+              );
+            }
+          },
           textButton: "Next",
           colorButton: ColorsManager.primayColor,
         )

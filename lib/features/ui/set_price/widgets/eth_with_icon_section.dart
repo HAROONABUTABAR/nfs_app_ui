@@ -14,7 +14,7 @@ class EthWithIconSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100.w,
+      width: 110.w,
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 9.8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
